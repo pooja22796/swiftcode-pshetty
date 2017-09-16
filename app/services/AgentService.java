@@ -12,7 +12,7 @@ import java.util.concurrent.CompletionStage;
 
 public class AgentService {
 
-    public AgentResponse  getResponse(String text){
+    public AgentResponse getAgentResponse(String text){
      AgentResponse agentResponse = new AgentResponse();
      try{
          WSRequest queryRequest = WS.url("https://api.api.ai/api/query");
