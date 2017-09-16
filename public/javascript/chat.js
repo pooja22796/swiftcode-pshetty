@@ -1,4 +1,5 @@
 var app = angular.module('chatApp',['ngMaterial']);
+
  app.controller('chatController',function ($scope,$sce) {
  	$scope.messages = [];
 
@@ -8,7 +9,7 @@ var app = angular.module('chatApp',['ngMaterial']);
 	};
 	$scope.trust = $sce.trustAsHtml;
 
-	var  exampleSocket =  new  WebSocket("wss://swiftcode-pooja.herokuapp.com/chatSocket"); 
+	var  exampleSocket =  new  WebSocket("wss://swiftcode-pooja.herokuapp.com/chatSocket");
 	exampleSocket.onmessage  =   function  (event) {  
 		var jsonData = JSON.parse(event.data);  
 		jsonData.time = new Date().toLocaleTimeString(); 
